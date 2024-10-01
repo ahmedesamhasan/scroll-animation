@@ -1,0 +1,56 @@
+/* Universal reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;  /* Specify font */
+    text-transform: capitalize;
+}
+
+body {
+    background-color: #efedd6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+h1 {
+    margin: 20px;
+    font-size: 2rem;
+    color: #333;
+}
+
+/* Box styles */
+.box {
+    background-color: saddlebrown;
+    color: #efedd6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    height: 200px;
+    margin: 10px;
+    border-radius: 10px;
+    border: 3px solid #0f0f0f;
+    box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    transition: transform 0.5s ease-out;
+    transform: translateX(400%); /* Initially off-screen */
+}
+
+/* Animate even boxes from the left */
+.box:nth-of-type(even) {
+    transform: translateX(-400%);
+}
+
+/* Visible boxes */
+.box.show {
+    transform: translateX(0); /* Brings boxes back into view */
+}
+
+h2 {
+    font-size: 1.8rem;
+}
